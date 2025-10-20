@@ -10,11 +10,11 @@ def test_highlight_getstarted(page :Page):
     page.get_by_role("link",name="Get started").click()
 def test_highlight_github_star(page: Page):
     page.goto("https://playwright.dev/python/")
-    # تسليط الضوء على زر Star
+ 
     star_button = page.locator('[aria-label="Star microsoft/playwright-python on GitHub"]')
     star_button.highlight()
     star_button.click()  
-    # انتظر 5 ثواني لتشوفي التغيير
+   
     page.wait_for_timeout(5000)
 def test_highlight_star2(page: Page ):
     page.goto("https://playwright.dev/python/")
